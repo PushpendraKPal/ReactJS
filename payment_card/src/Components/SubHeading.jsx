@@ -1,0 +1,4 @@
+
+export default function SubHeading({sub}){
+    return <div><h1>{sub}</h1></div>
+}
