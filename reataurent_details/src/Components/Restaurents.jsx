@@ -1,5 +1,10 @@
 
+
 export default function Restaurent({res}){
+
+    
+
+
     const cate= (cat)=>{
         let s = "";
         cat.forEach(e=>{
@@ -12,6 +17,9 @@ export default function Restaurent({res}){
         return x/5
     }
     return(
+        <>
+        <br />
+        <br />
         <div>
             <div>
                 <div>
@@ -20,7 +28,7 @@ export default function Restaurent({res}){
                 <div>
                     <h1>{res.name}</h1>
                     <h3>{cate(res.categories)}</h3>
-                    <h3>{`Rs ${res.cost_of_one}`}</h3>
+                    <h3>{`Rs ${res.cost_of_one} /-`}</h3>
                     <h3>{`Accepts ${res.payment_methods.cash?"cash":""}, ${res.payment_methods.card?"card":""}, ${res.payment_methods.cash?"online":""} payments only`}</h3>
                 </div>
                 <div>
@@ -30,5 +38,6 @@ export default function Restaurent({res}){
             </div>
             <div></div>
         </div>
+        </>
     )
 }
